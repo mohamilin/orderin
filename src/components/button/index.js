@@ -47,7 +47,7 @@ export default function Button(props) {
           style={props.style}
           target={props.target === "_blank" ? "_blank" : undefined}
           // noopener noreferrer bisa bermnafaaat utk SEO
-          rel={props.target === "_blank" ? "noopener noreferrer" : undefined}
+          rel={props.target === "_blank" ? "noreferrer" : "noreferrer"}
         >
           {props.children}
         </a>
