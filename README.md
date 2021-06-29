@@ -1,4 +1,4 @@
-###Step-step
+### Step-step
 
 1. Ketik : yarn create reat-app orderin
    - untuk setup aplikasi react
@@ -28,7 +28,32 @@
     "compilerOptions": {
         "baseUrl": "src"
     },
-    "include": ["src/**/*"] // agar smw file dalam src dapat saling terkoneksikan,
+    "include": ["src/**/*"] // agar memudahkan file dalam src dapat saling terkoneksikan, sampai ke dalam path-path nya
     }
    ```
    - tujuan dari penambhan file jsconfig.json untuk memudahkan dalam import berbagai element/components
+
+#### Buat component button
+
+1. import bbrpa package :
+   - Masuk k dalam file src > button > index.js
+   - Link dari react-router-dom : untuk navigation
+   - PropTypes dari prop-types untuk Button tujuannya u/ pengecekan apa saja yang dimiliki / diterima PropTypes oleh Button
+   - Kirim parameter props di dalam Button => Button(props)
+   - Code tambahan dalam menggunakan propTypes
+   ```js
+   Button.propTypes = {
+     // beberapa property yang dibutuhkan dalam button
+     type: propTypes.oneOf(["button", "link"]),
+     onClick: propTypes.func, // onClik akan berjalan dengan menggunakan function
+     target: propTypes.string,
+     isDisabled: propTypes.bool, // klo misalnya link / button nya disable
+     isLoading: propTypes.bool, // klo dicklik muncul loading spinner
+     isSmall: propTypes.bool, // Ukuran small
+     isLarge: propTypes.bool,
+     isBlock: propTypes.bool,
+     isExternal: propTypes.bool, // jika link nya  nnti akan mengarah ke luar aplikasi, tp klo cuman k dalam cukup pake Link
+     hasShadow: propTypes.bool, // utk button dg tampilan punya shadow
+   };
+   ```
+   - implementasi smw proptypes
