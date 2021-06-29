@@ -42,3 +42,12 @@
 @import "spinners";
 @import "utilities";
 @import "print";
+
+.brand-text-logo {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 42px;
+    color: $primary
+}
