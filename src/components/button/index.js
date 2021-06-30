@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
@@ -47,7 +48,7 @@ export default function Button(props) {
           style={props.style}
           target={props.target === "_blank" ? "_blank" : undefined}
           // noopener noreferrer bisa bermnafaaat utk SEO
-          rel={props.target === "_blank" ? "noreferrer" : "noreferrer"}
+          rel={props.target === "_blank" ? "noreferrer" : undefined}
         >
           {props.children}
         </a>
