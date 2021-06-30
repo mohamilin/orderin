@@ -47,7 +47,36 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 26px;
+    font-size: 30px;
     line-height: 42px;
     color: $primary
+}
+
+header {
+    border-bottom: 1px solid $gray-200;
+    width: 100%;
+    position: relative;
+
+    .navbar {
+        height: 80px;
+        
+        ul.navbar-nav {
+            margin: 5px 0 0 30px;
+            li.nav-item {
+               
+                a {
+                    &.nav-link {
+                        color: $gray-900;
+                        padding-left: 1rem;
+                        padding-right: 1rem;
+                        &:hover {
+                            text-decoration: underline;
+                            color: $orange;
+                            font-weight: bolder;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
