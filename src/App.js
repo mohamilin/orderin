@@ -1,16 +1,13 @@
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import LandingPage from "pages/LandingPage";
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 
 import "./App.css";
 import "./assets/scss/style.scss";
-import Button from "./components/button";
-import IconText from "./parts/IconText";
 function App() {
   return (
     <div className="App">
-      <Button isPrimary> hai </Button>
       <Router>
-        <LandingPage />
+        <Route path="/" component={LandingPage}></Route>
       </Router>
     </div>
   );
